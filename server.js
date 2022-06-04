@@ -7,9 +7,6 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));
